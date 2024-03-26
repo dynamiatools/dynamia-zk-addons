@@ -19,10 +19,9 @@ public class Badge extends Span {
 
     private void init() {
         getChildren().clear();
-        setSclass(null);
         if (value != null && !value.isBlank()) {
             String sclass = value.toLowerCase().trim().replace(" ", "-");
-            setSclass("badge badge-" + sclass);
+            setZclass("badge badge-" + sclass);
             appendChild(new Text(value));
         }
     }

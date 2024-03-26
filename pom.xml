@@ -39,7 +39,7 @@
     </scm>
 
     <properties>
-        <zk.version>9.6.0.2-jakarta</zk.version>
+        <zk.version>10.0.0-jakarta</zk.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>17</java.version>
         <target.version>17</target.version>

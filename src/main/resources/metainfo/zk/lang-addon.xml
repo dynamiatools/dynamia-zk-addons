@@ -20,7 +20,7 @@
     <addon-name>dynamia-zk-addons</addon-name>
     <language-name>xul/html</language-name>
 
-    <stylesheet href="~/dynamia-zk-addons/css/components.css?v=${project.version}" type="text/css"/>s"/>
+    <stylesheet href="/zkau/web/dynamia-zk-addons/css/components.css?v=${project.version}" type="text/css"/>s"/>
 
 
     <component>
