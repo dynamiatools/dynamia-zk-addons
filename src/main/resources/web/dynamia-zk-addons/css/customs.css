@@ -1,3 +1,7 @@
-.z-aceditor{
+.z-aceditor {
     font-family: monospace;
+}
+
+.z-signaturepad {
+    border: 1px solid silver;
 }
