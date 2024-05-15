@@ -28,9 +28,33 @@ To get started with Dynamia ZK, include the following dependency in your project
 
 Make sure to add the ZKoss framework as a dependency in your project as well.
 
+## Components
+
+* ChartJS
+* Ace Editor
+* Card
+* Infobox
+* Badge
+* Alert
+* Colorbox
+* EnumLabel
+* EnumListbox
+* Keypad
+* LocaleCombobox
+* TimeZoneCombobox
+* SimpleCombobox
+* Booleanbox
+* SignaturePad (preview)
+
+More coming soon
+
+### Example
+
+https://github.com/dynamiatools/demo-my-books
+
 ## Usage
 
-Refer to the official [documentation](https://link-to-docs) for detailed information on how to use Dynamia ZK in your ZKoss projects.
+Refer to the official [documentation]() for detailed information on how to use Dynamia ZK in your ZKoss projects.
 
 ## License
 
