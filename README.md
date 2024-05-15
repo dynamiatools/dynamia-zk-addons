@@ -48,9 +48,9 @@ Make sure to add the ZKoss framework as a dependency in your project as well.
 
 More coming soon
 
-### Example
+### Examples
 
-https://github.com/dynamiatools/demo-my-books
+https://github.com/dynamiatools/demo-my-books/tree/main/src/main/resources/pages
 
 ## Usage
 
