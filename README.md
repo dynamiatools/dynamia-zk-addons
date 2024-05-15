@@ -4,7 +4,7 @@
 ![Java Version Required](https://img.shields.io/badge/java-17-blue)
 [![Java CI with Maven](https://github.com/dynamiatools/framework/actions/workflows/maven.yml/badge.svg)](https://github.com/dynamiatools/dynamia-zk-addons/actions/workflows/maven.yml)
 
-Dynamia ZK Addons is a comprehensive all in one library of extensions, utilities, and components designed to enhance and streamline your development experience with the ZKoss framework.
+Dynamia ZK Addons is a comprehensive all in one library of extensions, utilities, and components designed to enhance and streamline your development experience with the [ZK Framework](https://www.zkoss.org).
 
 ## Features
 
