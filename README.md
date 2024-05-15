@@ -1,6 +1,8 @@
 # Dynamia ZK Addons
 
-![Dynamia ZK Logo](link-to-logo.png)
+[![Maven Central](https://img.shields.io/maven-central/v/tools.dynamia/dynamia-zk-addons)](https://search.maven.org/search?q=dynamia-zk-addons)
+![Java Version Required](https://img.shields.io/badge/java-17-blue)
+[![Java CI with Maven](https://github.com/dynamiatools/framework/actions/workflows/maven.yml/badge.svg)](https://github.com/dynamiatools/dynamia-zk-addons/actions/workflows/maven.yml)
 
 Dynamia ZK Addons is a comprehensive all in one library of extensions, utilities, and components designed to enhance and streamline your development experience with the ZKoss framework.
 
