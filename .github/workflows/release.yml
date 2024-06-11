@@ -31,5 +31,5 @@ jobs:
       run: mvn clean javadoc:jar source:jar deploy -P release-sign-artifacts
       env:
         GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
-        MAVEN_USERNAME: ${{ secrets.OSSRH_USER }}
+        MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
         MAVEN_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
