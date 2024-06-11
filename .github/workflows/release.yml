@@ -2,13 +2,11 @@
 # This workflow will build a Java project with Maven
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
 
-name: Maven Build
+name: Release and Deploy
 
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  release:
+    types: [ created ]
 
 jobs:
   build:
@@ -25,4 +23,7 @@ jobs:
         distribution: corretto
         cache: maven
     - name: Build with Maven
-      run: mvn package
+      run: mvn clean javadoc:jar source:jar deploy -p release-sign-artifacts
+      env:
+        GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+        GPG_PUBLIC_KEY: ${{ secrets.GPG_PUBLIC_KEY }}

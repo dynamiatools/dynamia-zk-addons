@@ -6,6 +6,7 @@ import org.zkoss.zk.ui.Page;
 import org.zkoss.zk.ui.event.Event;
 import org.zkoss.zk.ui.event.EventListener;
 import org.zkoss.zk.ui.event.Events;
+import org.zkoss.zul.Messagebox;
 import org.zkoss.zul.Window;
 
 public class ZKCommonUtils {
@@ -71,4 +72,49 @@ public class ZKCommonUtils {
         return createWindow(title, width, height, null);
     }
 
+    /**
+     * Show exception as error messages
+     */
+
+    public static void showErrorMessage(Exception e) {
+        showErrorMessage(e.getMessage());
+    }
+
+    /**
+     * Show a {@link Messagebox} error message
+     *
+     * @param message
+     */
+    public static void showErrorMessage(String message) {
+        showErrorMessage(message, "Error");
+    }
+
+    /**
+     * Show a {@link Messagebox} error message with title
+     *
+     * @param message
+     * @param title
+     */
+    public static void showErrorMessage(String message, String title) {
+        Messagebox.show(message, title, Messagebox.OK, Messagebox.ERROR);
+    }
+
+    /**
+     * Show a {@link Messagebox} EXCLAMATION message
+     *
+     * @param message
+     */
+    public static void showWarningMessage(String message) {
+        showWarningMessage(message, "Warning");
+    }
+
+    /**
+     * Show a {@link Messagebox} EXCLAMATION message with title
+     *
+     * @param message
+     * @param title
+     */
+    public static void showWarningMessage(String message, String title) {
+        Messagebox.show(message, title, Messagebox.OK, Messagebox.EXCLAMATION);
+    }
 }

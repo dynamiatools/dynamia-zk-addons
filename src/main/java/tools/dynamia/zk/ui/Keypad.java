@@ -393,12 +393,13 @@ public class Keypad extends Div {
         pad.setHeight("400px");
 
 
-        Window win = ZKCommonUtils.createWindow(title, null, "300px");
+        Window win = ZKCommonUtils.createWindow(title, "300px", "300px");
         win.appendChild(vlayout);
         pad.addEventListener(Events.ON_OK, evt -> {
             win.detach();
             onOk.onEvent(evt);
         });
+        win.doModal();
         return pad;
     }
 
