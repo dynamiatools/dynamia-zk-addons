@@ -140,6 +140,7 @@
             <groupId>org.zkoss.zk</groupId>
             <artifactId>zhtml</artifactId>
             <version>${zk.version}</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
