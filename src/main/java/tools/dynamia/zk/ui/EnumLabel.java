@@ -37,18 +37,25 @@ public class EnumLabel extends Label implements LoadableOnly {
         return enumValue;
     }
 
+    private String clear(String string) {
+        if (string == null) {
+            return "";
+        } else {
+            return string.trim().replace("_", " ");
+        }
+    }
+
     public void setEnum(Enum enumValue) {
         if (!Objects.equals(this.enumValue, enumValue)) {
             this.enumValue = enumValue;
-            setValue(enumValue.toString());
+            setValue(clear(enumValue.toString()));
         }
 
     }
-
     @Override
     public void setValue(String value) {
         if (!Objects.equals(getValue(), value)) {
-            super.setValue(value);
+            super.setValue(clear(value));
             renderStyles();
         }
     }
