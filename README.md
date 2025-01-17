@@ -23,11 +23,11 @@ To get started with Dynamia ZK, include the following dependency in your project
 <dependency>
     <groupId>tools.dynamia</groupId>
     <artifactId>dynamia-zk-addons</artifactId>
-    <version>1.0.1</version> <!-- Replace with the latest version -->
+    <version>1.0.2</version> <!-- Replace with the latest version -->
 </dependency>
 ```
 
-Make sure to add the ZKoss framework as a dependency in your project as well.
+Make sure to add the ZK framework as a dependency in your project as well.
 
 ## Components
 
@@ -77,6 +77,14 @@ Dynamia ZK is built on the foundation of the ZKoss framework. We appreciate the 
 
 For any inquiries or feedback, please contact us at [info@dynamia.tools](mailto:info@dynamia.tools).
 
+## ☕ Support DynamiaTools
+
+Hey there! DynamiaTools is built with a lot of dedication to help developers speed up their projects and make development more enjoyable. If DynamiaTools has been useful to you or your projects, consider supporting its development. Your support helps keep the project alive and evolving with new features and improvements. Every coffee counts! 😊
+
+<a href="https://www.buymeacoffee.com/marioserrano" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
+
+
 ---
 
-© 2024 Dynamia Tools. All Rights Reserved.
+© 2025 Dynamia Tools. All Rights Reserved.
