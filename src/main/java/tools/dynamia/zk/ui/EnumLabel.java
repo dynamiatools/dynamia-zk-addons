@@ -40,7 +40,7 @@ public class EnumLabel extends Label implements LoadableOnly {
     public void setEnum(Enum enumValue) {
         if (!Objects.equals(this.enumValue, enumValue)) {
             this.enumValue = enumValue;
-            setValue(enumValue.toString());
+            setValue(enumValue.toString().replace("_", " "));
         }
 
     }
@@ -75,7 +75,7 @@ public class EnumLabel extends Label implements LoadableOnly {
         if (enumValue != null) {
             setSclass(defaultSclass + "  " + sclassPrefix + enumValue);
         } else {
-            setSclass(defaultSclass + "  " + sclassPrefix + getValue());
+            setSclass(defaultSclass + "  " + sclassPrefix + (getValue().replace(" ", "_")));
         }
     }
 }
