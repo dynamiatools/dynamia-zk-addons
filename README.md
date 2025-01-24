@@ -23,7 +23,7 @@ To get started with Dynamia ZK, include the following dependency in your project
 <dependency>
     <groupId>tools.dynamia</groupId>
     <artifactId>dynamia-zk-addons</artifactId>
-    <version>1.0.2</version> <!-- Replace with the latest version -->
+    <version>1.0.3</version> <!-- Replace with the latest version -->
 </dependency>
 ```
 
