@@ -12,10 +12,13 @@ tools.dynamia.zk.ui.signaturepad.SignaturePad = zk.$extends(zk.Widget, {
 
     setValue: function (value) {
         if (this._value !== value) {
+            this._value = value;
             if (this.pad) {
-                //update pad
-            } else {
-                this._value = value;
+                if (this._value == null || this._value === '') {
+                    this.pad.clear();
+                } else {
+                    this.pad.fromDataURL(this._value);
+                }
             }
         }
     },
@@ -27,10 +30,9 @@ tools.dynamia.zk.ui.signaturepad.SignaturePad = zk.$extends(zk.Widget, {
 
     setPenColor: function (penColor) {
         if (this._penColor !== penColor) {
+            this._penColor = penColor;
             if (this.pad) {
                 this.pad.penColor = penColor;
-            } else {
-                this._penColor = penColor;
             }
         }
     },
@@ -57,10 +59,9 @@ tools.dynamia.zk.ui.signaturepad.SignaturePad = zk.$extends(zk.Widget, {
 
     setMaxWidth: function (maxWidth) {
         if (this._maxWidth !== maxWidth) {
+            this._maxWidth = maxWidth;
             if (this.pad) {
                 this.pad.maxWidth = maxWidth;
-            } else {
-                this._maxWidth = maxWidth;
             }
         }
     },
@@ -84,11 +85,15 @@ tools.dynamia.zk.ui.signaturepad.SignaturePad = zk.$extends(zk.Widget, {
             this.pad.maxWidth = this._maxWidth;
         }
 
+        if (this._value) {
+            this.pad.fromDataURL(this._value);
+        }
+
         //Send events to server
         this.pad.addEventListener("endStroke", () => {
-            console.log("Sending to server");
             this._value = this.pad.toDataURL();
-            this.fire("onChange", this._value, {toServer: true})
+            this.smartUpdate("value", this._value, true)
+            this.fire("onChange", {value: this._value}, {toServer: true});
         }, {once: false});
     },
 
