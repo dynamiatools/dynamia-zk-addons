@@ -45,7 +45,7 @@ Make sure to add the ZK framework as a dependency in your project as well.
 * TimeZoneCombobox
 * SimpleCombobox
 * Booleanbox
-* SignaturePad (preview)
+* SignaturePad
 
 More coming soon
 
