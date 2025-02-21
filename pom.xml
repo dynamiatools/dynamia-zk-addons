@@ -4,7 +4,7 @@
 
     <groupId>tools.dynamia</groupId>
     <artifactId>dynamia-zk-addons</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <packaging>jar</packaging>
     <name>Dynamia ZK Addons</name>
     <url>https://www.dynamia.tools</url>

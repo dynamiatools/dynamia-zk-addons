@@ -2,12 +2,17 @@ package tools.dynamia.zk.ui;
 
 import org.zkoss.zk.ui.HtmlBasedComponent;
 import org.zkoss.zk.ui.event.Events;
+import org.zkoss.zk.ui.sys.ComponentCtrl;
 import org.zkoss.zk.ui.sys.ContentRenderer;
 
 import java.io.IOException;
 import java.util.Objects;
 
 public class SignaturePad extends HtmlBasedComponent {
+
+    static {
+        addClientEvent(SignaturePad.class, Events.ON_CHANGE, ComponentCtrl.CE_IMPORTANT);
+    }
 
     private String value;
     private String penColor;
@@ -66,5 +71,14 @@ public class SignaturePad extends HtmlBasedComponent {
         renderer.render("penColor", this.penColor);
         renderer.render("minWidth", this.minWidth);
         renderer.render("maxWidth", this.maxWidth);
+    }
+
+    @Override
+    protected void updateByClient(String name, Object value) {
+        if ("value".equals(name) && value instanceof String) {
+            this.value = value.toString();
+        } else {
+            super.updateByClient(name, value);
+        }
     }
 }
