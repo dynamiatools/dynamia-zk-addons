@@ -1,7 +1,7 @@
 # Dynamia ZK Addons
 
 [![Maven Central](https://img.shields.io/maven-central/v/tools.dynamia/dynamia-zk-addons)](https://search.maven.org/search?q=dynamia-zk-addons)
-![Java Version Required](https://img.shields.io/badge/java-17-blue)
+![Java Version Required](https://img.shields.io/badge/java-21-blue)
 [![Java CI with Maven](https://github.com/dynamiatools/framework/actions/workflows/maven.yml/badge.svg)](https://github.com/dynamiatools/dynamia-zk-addons/actions/workflows/maven.yml)
 [![Release and Deploy](https://github.com/dynamiatools/dynamia-zk-addons/actions/workflows/release.yml/badge.svg)](https://github.com/dynamiatools/dynamia-zk-addons/actions/workflows/release.yml)
 
@@ -23,7 +23,7 @@ To get started with Dynamia ZK, include the following dependency in your project
 <dependency>
     <groupId>tools.dynamia</groupId>
     <artifactId>dynamia-zk-addons</artifactId>
-    <version>1.0.3</version> <!-- Replace with the latest version -->
+    <version>1.1.0</version> <!-- Replace with the latest version -->
 </dependency>
 ```
 
