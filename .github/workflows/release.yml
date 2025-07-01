@@ -22,7 +22,7 @@ jobs:
         architecture: x64
         distribution: temurin
         cache: maven
-        server-id: ossrh
+        server-id: central
         server-username: MAVEN_USERNAME # env variable for username in deploy
         server-password: MAVEN_PASSWORD # env variable for token in deploy
         gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
