@@ -4,7 +4,7 @@
 
     <groupId>tools.dynamia</groupId>
     <artifactId>dynamia-zk-addons</artifactId>
-    <version>1.1.0</version>
+    <version>1.2.0</version>
     <packaging>jar</packaging>
     <name>Dynamia ZK Addons</name>
     <url>https://www.dynamia.tools</url>
@@ -39,7 +39,7 @@
     </scm>
 
     <properties>
-        <zk.version>10.1.0-jakarta</zk.version>
+        <zk.version>10.2.1-jakarta</zk.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>21</java.version>
         <target.version>21</target.version>
