@@ -48,7 +48,7 @@ public class EnumLabel extends Label implements LoadableOnly {
     public void setEnum(Enum enumValue) {
         if (!Objects.equals(this.enumValue, enumValue)) {
             this.enumValue = enumValue;
-            setValue(clear(enumValue.toString()));
+            setValue(enumValue != null ? clear(enumValue.toString()) : null);
         }
 
     }

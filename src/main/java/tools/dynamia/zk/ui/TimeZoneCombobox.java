@@ -27,6 +27,7 @@ import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 
 public class TimeZoneCombobox extends Combobox {
@@ -78,7 +79,7 @@ public class TimeZoneCombobox extends Combobox {
     }
 
     public void setSelected(String selected) {
-        if (selected != this.selected) {
+        if (!Objects.equals(selected, this.selected)) {
             this.selected = selected;
             try {
                 ListModelList model = (ListModelList) getModel();

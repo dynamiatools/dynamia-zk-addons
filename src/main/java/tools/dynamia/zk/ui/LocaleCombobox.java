@@ -66,7 +66,7 @@ public class LocaleCombobox extends Combobox {
     }
 
     public void setSelected(String selected) {
-        if (selected != this.selected) {
+        if (!Objects.equals(selected, this.selected)) {
             this.selected = selected;
             try {
                 String[] parts = selected.split("-");

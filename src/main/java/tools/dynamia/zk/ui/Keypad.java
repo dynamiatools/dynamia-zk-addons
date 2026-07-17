@@ -77,6 +77,7 @@ public class Keypad extends Div {
     }
 
     public void init() {
+        getChildren().clear();
         setSclass("keypad");
         setStyle("overflow: hidden");
 

@@ -31,9 +31,10 @@ public class CategoryChartjsData extends ChartjsData {
 
     public CategoryChartjsData add(String label, Number value, String backgroundColor) {
         addLabel(label);
-        dataset.addData(value);
         if (backgroundColor != null && !backgroundColor.isEmpty()) {
-            dataset.addBackgroundColor(backgroundColor);
+            dataset.addData(value, backgroundColor);
+        } else {
+            dataset.addData(value);
         }
         return this;
     }

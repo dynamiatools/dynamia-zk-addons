@@ -64,7 +64,7 @@ public class Dataset<T> extends LazyJSONObject {
     private String xAxisID;
     private String yAxisID;
 
-    private ChartjsColorPalette colorPalette = new ChartjsColorPalette();
+    private transient ChartjsColorPalette colorPalette = new ChartjsColorPalette();
 
 
     public Dataset() {
@@ -138,6 +138,15 @@ public class Dataset<T> extends LazyJSONObject {
         return this;
     }
 
+    public Dataset<T> addData(T data, String backgroundColor) {
+        if (this.data == null) {
+            this.data = new ArrayList<T>();
+        }
+        this.data.add(data);
+        addBackgroundColor(backgroundColor);
+        return this;
+    }
+
     public List<String> getBackgroundColors() {
         return backgroundColors;
     }
@@ -153,7 +162,7 @@ public class Dataset<T> extends LazyJSONObject {
     }
 
     public int getBorderWidth() {
-        return borderWidth;
+        return borderWidth != null ? borderWidth : 0;
     }
 
     public Dataset<T> setBorderWidth(int borderWidth) {
@@ -186,7 +195,7 @@ public class Dataset<T> extends LazyJSONObject {
     }
 
     public boolean isHidden() {
-        return hidden;
+        return hidden != null && hidden;
     }
 
     public void setHidden(boolean hidden) {
@@ -223,7 +232,7 @@ public class Dataset<T> extends LazyJSONObject {
     }
 
     public int getPointBorderWidth() {
-        return pointBorderWidth;
+        return pointBorderWidth != null ? pointBorderWidth : 0;
     }
 
     public Dataset<T> setPointBorderWidth(int pointBorderWidth) {

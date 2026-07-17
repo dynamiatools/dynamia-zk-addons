@@ -120,7 +120,9 @@ public class Alert extends Div {
             }
 
             setZclass("alert alert-dismissible " + sclass);
-            setIconSclass(icon);
+            if (icon != null) {
+                setIconSclass(icon);
+            }
         }
     }
 

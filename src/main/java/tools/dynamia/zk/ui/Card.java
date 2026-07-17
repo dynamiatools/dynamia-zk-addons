@@ -88,9 +88,13 @@ public class Card extends DivContainer {
 
     public void setColor(String color) {
         if (!Objects.equals(this.color, color)) {
-            this.removeSclass(SCLASS_PREFIX + color);
+            if (this.color != null) {
+                this.removeSclass(SCLASS_PREFIX + this.color);
+            }
             this.color = color;
-            this.addSclass(SCLASS_PREFIX + color);
+            if (this.color != null) {
+                this.addSclass(SCLASS_PREFIX + this.color);
+            }
         }
     }
 
