@@ -62,7 +62,7 @@ public class SimpleCombobox extends Combobox {
         if (getSelectedItem() != null) {
             selected = getSelectedItem().getValue();
         }
-        return selected.getValue();
+        return selected != null ? selected.getValue() : null;
     }
 
     public void setSelected(SimpleItem selected) {

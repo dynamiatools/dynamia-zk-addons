@@ -18,6 +18,7 @@ package tools.dynamia.zk;
 import org.zkoss.json.JSONObject;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -43,6 +44,9 @@ public class LazyJSONObject extends JSONObject {
             Class clazz = getClass();
             loadClassFields(fields, clazz);
             for (Field field : fields) {
+                if (Modifier.isTransient(field.getModifiers()) || Modifier.isStatic(field.getModifiers())) {
+                    continue;
+                }
                 field.setAccessible(true);
                 Object fieldValue = field.get(this);
                 if (fieldValue != null) {

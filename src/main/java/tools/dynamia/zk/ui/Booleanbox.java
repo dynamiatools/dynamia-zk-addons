@@ -19,7 +19,6 @@ package tools.dynamia.zk.ui;
 
 import org.zkoss.zul.AbstractListModel;
 import org.zkoss.zul.Combobox;
-import org.zkoss.zul.Comboitem;
 import org.zkoss.zul.ComboitemRenderer;
 import tools.dynamia.zk.ZKModelsUtils;
 
@@ -39,7 +38,8 @@ public class Booleanbox extends Combobox {
     }
 
     public Booleanbox(Boolean value) {
-        this.selected = value;
+        init();
+        setSelected(value);
     }
 
     public void init() {
@@ -80,7 +80,10 @@ public class Booleanbox extends Combobox {
         this.selected = selected;
 
         if (getModel() instanceof AbstractListModel model) {
-            Optional result = getItems().stream().filter(c -> Objects.equals(c.getValue(), selected)).map(Comboitem::getValue).findFirst();
+            Optional<BooleanWrapper> result = getItems().stream()
+                    .map(item -> (BooleanWrapper) item.getValue())
+                    .filter(wrapper -> Objects.equals(wrapper.value, selected))
+                    .findFirst();
             if (result.isPresent()) {
                 //noinspection unchecked
                 model.addToSelection(result.get());

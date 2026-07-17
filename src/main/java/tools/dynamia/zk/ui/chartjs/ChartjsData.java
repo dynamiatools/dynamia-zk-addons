@@ -20,6 +20,7 @@ import tools.dynamia.zk.LazyJSONObject;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -50,9 +51,7 @@ public class ChartjsData extends LazyJSONObject {
 
     public void setLabels(String... labels) {
         if (labels != null) {
-            for (String label : labels) {
-                this.labels.add(label);
-            }
+            this.labels = new ArrayList<>(Arrays.asList(labels));
             propertyChangeSupport.firePropertyChange("labels", null, this.labels);
         }
     }
